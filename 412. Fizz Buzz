@@ -1,0 +1,20 @@
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        lists = list(range(1, n+1))
+        for i in lists:
+            x = i % 3
+            y = i % 5
+            if x == 0 and y != 0 :
+                lists[i-1] = 'Fizz'
+            elif x != 0 and y == 0 :
+                lists[i-1] = 'Buzz'
+            elif x == 0 and y == 0 :
+                lists[i-1] = 'FizzBuzz'
+            else:
+                print(str(i))
+                lists[i-1] = str(i)
+        return lists
+
+
+#Runtime: 48 ms, faster than 84.11% of Python3 online submissions for Fizz Buzz.
+#Memory Usage: 14.9 MB, less than 6.38% of Python3 online submissions for Fizz Buzz.
